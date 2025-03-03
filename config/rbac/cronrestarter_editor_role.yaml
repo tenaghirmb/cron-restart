@@ -1,0 +1,27 @@
+# permissions for end users to edit cronrestarters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: cron-restart
+    app.kubernetes.io/managed-by: kustomize
+  name: cronrestarter-editor-role
+rules:
+- apiGroups:
+  - autorestart.uni.com
+  resources:
+  - cronrestarters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - autorestart.uni.com
+  resources:
+  - cronrestarters/status
+  verbs:
+  - get

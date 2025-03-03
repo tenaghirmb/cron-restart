@@ -1,0 +1,21 @@
+activeEnv: prod
+
+namespace: kube-system
+
+replicas: 1
+
+image:
+  sit:
+    repository: docker.io/tenaghirmb/cronrestart
+    tag: "v1.0"
+  prod:
+    repository: docker.io/tenaghirmb/cronrestart
+    tag: "v1.0"
+
+resources:
+  limits:
+    cpu: "1"
+    memory: 2Gi
+  requests:
+    cpu: "1"
+    memory: 1Gi

@@ -1,0 +1,9 @@
+apiVersion: autorestart.uni.com/v1
+kind: CronRestarter
+metadata:
+  labels:
+    app.kubernetes.io/name: cron-restart
+    app.kubernetes.io/managed-by: kustomize
+  name: cronrestarter-sample
+spec:
+  # TODO(user): Add fields here

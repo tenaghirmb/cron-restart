@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- autorestart_v1_cronrestarter.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
